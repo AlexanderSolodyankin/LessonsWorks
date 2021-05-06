@@ -12,15 +12,19 @@ public class home_18 {
 
 
         for(int i = 0; i < farms.length; i++){
-            System.out.println("Введите Страну в котором находится ферма.");
-            String contry = sc.nextLine();
-            System.out.println("Введите город в котором находится ферма.");
-            String sity = sc.nextLine();
-            System.out.println("Назовите улицу на которой находится ферма.");
-            String street = sc.nextLine();
-            System.out.println("Назовите номер фермы");
-            String hous = sc.nextLine();
-            System.out.println("Введите количество коров находящиеся на ферме.");
+//            System.out.println("Введите Страну в котором находится ферма.");
+            String contry;// = sc.nextLine();
+            contry = "Сотекн " + (i + 1);
+//            System.out.println("Введите город в котором находится ферма.");
+            String sity;// = sc.nextLine();
+            sity = "Город " + (i + 1);
+//            System.out.println("Назовите улицу на которой находится ферма.");
+            String street;// = sc.nextLine();
+            street = "Улица " + (i + 1);
+//            System.out.println("Назовите номер фермы");
+            String hous;// = sc.nextLine();
+            hous = " дом " + (i + 1);
+//            System.out.println("Введите количество коров находящиеся на ферме.");
             int num = sc.nextInt();
             Cows[] cow = new Cows[num];
             for(int j=0; j< cow.length; j++){
