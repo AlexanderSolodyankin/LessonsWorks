@@ -59,11 +59,11 @@ public class Students {
 
     @Override
     public String toString(){
-        return String.format("Имя студента: %s \n" +
+        return String.format("\nИмя студента: %s \n" +
                              "Фамилия студента: %s \n" +
                             "Пол студента: %s \n " +
                             "Возраст студента: %s \n" +
-                            "Дата рождения Сутдента: %s \n", nameStudents, serNameStudents, genderStudents,
+                            "Дата рождения Сутдента: %s \n \n", nameStudents, serNameStudents, genderStudents,
                                                                 ageStudent, dateStudents);
     }
 }

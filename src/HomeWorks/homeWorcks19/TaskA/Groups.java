@@ -1,6 +1,5 @@
 package HomeWorks.homeWorcks19.TaskA;
 
-import HomeWorks.homeworcks18.Cows;
 
 public class Groups {
     private Students[] students;
@@ -53,6 +52,7 @@ public class Groups {
     }
     @Override
     public String toString(){
-        return String.format("%s %s %s ");
+        return String.format("\nСТУДЕНТЫ %s  \n КУРС %s \n Дата НАЧАЛА %s  \n Количество месяцев обучения: %s",
+                getStudents(), getCours(), getDateStart(), getDuration());
     }
 }

@@ -1,12 +1,29 @@
 package HomeWorks.homeWorcks19.TaskA;
 
-import java.util.Scanner;
+import java.util.Random;
 
 public class TaskA {
     public static void main(String[] args) {
-        DateFound date = new DateFound(13, 11, 1950);
-        Students testStudents = new Students("Alex", "Solo", "Неизвестный", date);
+        Random ran = new Random();
+        DateFound datCours = new DateFound(16,02,2006);
+        Courses cours = new Courses("It Academy", 56448, "Самат", "Касымбеков",
+                                        "Викторовичь", datCours);
 
-        System.out.println(testStudents);
+        Students[] oboltus = new Students[4];
+        for(int i = 0; i < oboltus.length; i++){
+
+            DateFound datBerthStudent = new DateFound((ran.nextInt(31 - 1 + 1) + 1),
+                    (ran.nextInt(12 - 1 + 1) + 1), (ran.nextInt(2021 - 1900 + 1) + 1900));
+
+            oboltus[i] = new Students(("Студент " + i), ("Фамилия" + i),("Гендер" + i),datBerthStudent);
+        }
+
+        DateFound dateGroup = new DateFound(26, 03, 2020);
+        Groups group = new Groups(oboltus,cours,dateGroup, 5);
+
+        System.out.println(group);
+
+
+
     }
 }
