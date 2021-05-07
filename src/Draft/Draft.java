@@ -2,11 +2,13 @@ package Draft;
 
 public class Draft {
     public static void main(String[] args) {
-        Gerl[] ger = new Gerl[2];
-        ger[0] = new Gerl("Маша");
-        ger[1] = new Gerl("Витя");
-        Boy playBoy = new Boy("Саша", ger);
-        System.out.println(playBoy);
+        Animal anim = new Animal("2", "3");
+
+        Cats cat = new Cats("4", "6", "2");
+
+        System.out.println(anim);
+        System.out.println(cat);
+
 
     }
 }

@@ -7,6 +7,8 @@ public class Groups {
     private DateFound dateStart;
     private int duration;
 
+    public Groups(){};
+
     public Groups(Students[] students, Courses cours, DateFound dateStart, int duration) {
         this.students = students;
         this.cours = cours;
