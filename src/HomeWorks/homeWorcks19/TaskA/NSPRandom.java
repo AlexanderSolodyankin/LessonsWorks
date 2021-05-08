@@ -2,6 +2,8 @@ package HomeWorks.homeWorcks19.TaskA;
 
 import java.util.Random;
 
+// Клас созданый для случайной генерации имен и фамилий
+// а так же и гендерного признака чтобы было проще вносить даные в студентов
 public class NSPRandom {
     private String name;
     private String serName;
@@ -11,6 +13,7 @@ public class NSPRandom {
     public NSPRandom(){
         Random  ran = new Random();
         int num;
+        // Случайная генерация имени ( точнее перетасовка)
         while (true){
             num = ran.nextInt(5 - 1 + 1) + 1;
             if(num == 1){name = "Александр"; break;}
@@ -19,6 +22,7 @@ public class NSPRandom {
             if(num == 4){name = "Маша"; break;}
             if(num == 5){name = "Ксюша"; break;}
         }
+        //случайная генерация фамилии
         while (true){
             num = ran.nextInt(5 - 1 + 1) + 1;
             if(num == 1){serName = "Паниклов"; break;}
@@ -27,6 +31,7 @@ public class NSPRandom {
             if(num == 4){serName = "Сергулина"; break;}
             if(num == 5){serName = "Либеда"; break;}
         }
+        // Случайноя генерация отчества ( но я его так и не использовал)
         while (true){
             num = ran.nextInt(5 - 1 + 1) + 1;
             if(num == 1){patron = "Александрович"; break;}
@@ -36,6 +41,8 @@ public class NSPRandom {
             if(num == 5){patron = "Генадиевич"; break;}
         }
 
+        // Генерация гендерного признака что бы женские имена выдовала женщин и на оборот
+        // ( Сделано через жопу и на чистом интузиазме)
         if(this.name.equals("Юля") || this.name.equals("Маша") || this.name.equals("Ксюша")){
             gender = "Женский";
         }

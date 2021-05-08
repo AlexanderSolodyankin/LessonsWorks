@@ -1,5 +1,6 @@
 package HomeWorks.homeWorcks19.TaskA;
 
+// Создан класс студент
 public class Students {
     private String nameStudents;
     private String serNameStudents;
@@ -7,12 +8,15 @@ public class Students {
     private  int ageStudent;
     private DateFound dateStudents;
 
+    // Конструктор класса
     public Students(String nameStudents, String serNameStudents, String genderStudents,
                     DateFound dateStudents) {
 
         this.nameStudents = nameStudents;
         this.serNameStudents = serNameStudents;
         this.genderStudents = genderStudents;
+
+        // Вычисление возроста по отношении к 2021 году
         this.ageStudent = 2021 - dateStudents.getYears();
         this.dateStudents = dateStudents;
     }

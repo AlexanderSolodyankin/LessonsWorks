@@ -1,8 +1,9 @@
 package HomeWorks.homeWorcks19.TaskA;
 
-
+// Создан класс "ГРУППА"
 public class Courses {
 
+     // Параметры Класса
      private String nameCours;
      private int idCours;
      private String nameDekan;
@@ -10,6 +11,7 @@ public class Courses {
      private String patronDecan;
      private DateFound dateFound;
 
+     // Конструктор класса Примечание что он принимает параметры другого класса для того чтобы задать дату основания группы
      public Courses(String nameCours, int idCours, String nameDekan, String serNameDecan,
                     String patronDecan, DateFound dateFound) {
 
@@ -70,6 +72,8 @@ public class Courses {
      public void setDateFound(DateFound dateFound) {
           this.dateFound = dateFound;
      }
+
+     // Конвертация в стринг все даные входящие в данный класс
      @Override
      public String toString(){
           return String.format("Название кураса: %s \n" +

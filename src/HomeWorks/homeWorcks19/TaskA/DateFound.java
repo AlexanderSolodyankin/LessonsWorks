@@ -3,17 +3,24 @@ package HomeWorks.homeWorcks19.TaskA;
 import java.util.Scanner;
 // Создал клас для определения даты рождения или какой либо даты
 public class DateFound {
+
+    // Параметры данного класса
     int day;
     int mounth;
     int years;
 
     public DateFound(int day, int mounth, int years) {
         Scanner sc = new Scanner(System.in);
+
+        // Заметил что сетеры не выдают даные в конструктор по этому пришлось их продублировать в самом конструкторе
+        // чтобы все работало
+
+        // проверка на отрицательное число чтобы данные были коректными
         if(day > 0 && day <= 31) {
             this.day = day;
         }
         else {
-            System.err.println("Неверно введено число дня");
+                     System.err.println("Неверно введено число дня");
             System.err.print("Введите верную дату дня: ");
             setDay(sc.nextInt());
         }
@@ -22,6 +29,7 @@ public class DateFound {
             this.mounth = mounth;
         }
         else {
+    // если данные не верны вывод ошибки а так же возможности испровления ошибки путем вызова метода самого класса
             System.err.println("Неверно введено число месяца");
             System.err.print("Введите верную дату месяца: ");
             setMounth(sc.nextInt());
@@ -31,6 +39,7 @@ public class DateFound {
             this.years = years;
         }
         else {
+  // если данные не верны вывод ошибки а так же возможности испровления ошибки путем вызова метода самого класса
             System.err.println("Неверно введено число года");
             System.err.print("Введите верную дату года: ");
             setYears(sc.nextInt());
@@ -49,6 +58,7 @@ public class DateFound {
             this.day = day;
         }
         else {
+    // если данные не верны вывод ошибки а так же возможности испровления ошибки путем вызова метода самого класса
             System.err.println("Неверно введена дата дня");
             System.err.print("Введите верную дату дня: ");
             setDay(sc.nextInt());
@@ -65,6 +75,7 @@ public class DateFound {
             this.mounth = mounth;
         }
         else {
+     // если данные не верны вывод ошибки а так же возможности испровления ошибки путем вызова метода самого класса
             System.err.println("Неверно введено число месяца");
             System.err.print("Введите верную дату месяца: ");
             setMounth(sc.nextInt());
@@ -81,12 +92,14 @@ public class DateFound {
             this.years = years;
         }
         else {
+    // если данные не верны вывод ошибки а так же возможности испровления ошибки путем вызова метода самого класса
             System.err.println("Неверно введено число года");
             System.err.print("Введите верную дату года: ");
             setYears(sc.nextInt());
         }
     }
 
+    // Конвертация конструктора в строку
     @Override
     public String toString(){
         return String.format("%s. %s. %s", getDay(), getMounth(), getYears());
