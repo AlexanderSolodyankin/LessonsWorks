@@ -1,14 +1,24 @@
 package HomeWorks.homeWorcks19.TaskB;
 
 public class Bread {
-    int weight;
-    int price;
+   protected int weight;
+   protected int price;
+   protected String productMode;
 
     public Bread(){}
 
-    public Bread(int weight, int price) {
+    public Bread(int weight, int price, String productMode) {
         this.weight = weight;
         this.price = price;
+        this.productMode = productMode;
+    }
+
+    public String getProductMode() {
+        return productMode;
+    }
+
+    public void setProductMode(String productMode) {
+        this.productMode = productMode;
     }
 
     public int getWeight() {
@@ -29,8 +39,9 @@ public class Bread {
 
     @Override
     public String toString(){
-        return String.format("Хлеб : \n" +
+        return String.format("Хлеб: Обычный \n" +
                             "Вес: %s\n" +
-                            "Цена: %s\n", weight, price);
+                            "Цена: %s\n" +
+                "Производитель: %s", weight, price, productMode);
     }
 }

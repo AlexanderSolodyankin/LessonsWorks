@@ -1,5 +1,7 @@
 package HomeWorks.homeworcks18;
 
+import Lessons.lessons19.Student;
+
 import java.util.Scanner;
 
 public class home_18 {
@@ -85,5 +87,6 @@ public class home_18 {
             System.out.println(farms[i]);
             System.out.println();
         }
+
     }
 }
