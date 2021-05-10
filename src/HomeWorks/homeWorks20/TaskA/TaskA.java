@@ -6,7 +6,7 @@ import HomeWorks.homeWorks20.TaskA.faculty.Lessons;
 import HomeWorks.homeWorks20.TaskA.helpers.DateFound;
 import HomeWorks.homeWorks20.TaskA.helpers.NSPRandom;
 import HomeWorks.homeWorks20.TaskA.objcte.Students;
-import HomeWorks.homeWorks20.homeWorks1.TaskA.faculty.*;
+
 
 import java.util.Random;
 
