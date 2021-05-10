@@ -9,10 +9,9 @@ public class Employee extends Human{
     private int fine;
     private  int experience;
     private int vacatiuonDays;
-    Human man;
+
 
     public Employee(Human man){
-        this.man = man;
         this.salary = getNum();
         if(this.salary < 0){
             this.salary = getNum();
@@ -30,15 +29,7 @@ public class Employee extends Human{
         this.fine = salary / 100;
         this.experience = getAge() / 9;
         this.vacatiuonDays = getAge() / 3;
-//        actions();
-    }
 
-    public Human getMan() {
-        return man;
-    }
-
-    public void setMan(Human man) {
-        this.man = man;
     }
 
     public String getPosition() {
@@ -91,10 +82,11 @@ public class Employee extends Human{
 
     @Override
     public String toString(){
-        return String.format("Сотрудник: %s. %s \n" +
+        String string = String.format("Сотрудник: %s. %s \n" +
                 "Должность: %s\n" +
                 "Опыработы : %s лет\n" +
-                "Заработная плата: %s\n", man.getName(), man.getSerName(), position, experience, salary);
+                "Заработная плата: %s\n", getName(), getPatronymic(), position, experience, salary);
+        return string;
     }
     public int getNum(){
         Random ran = new Random();
@@ -106,15 +98,14 @@ public class Employee extends Human{
         Random ran = new Random();
         int num = ran.nextInt(3 - 1 + 1) + 1;
         if(num == 1){
-            System.out.printf("Вышел в отпуск.\n" +
-                    "Получил премию: %s\n" +
-                    "Количество дней в отпуск: %s\n", prize, vacatiuonDays);
+            System.out.printf("Вышел в отпуск на %s дней.\n" +
+                    "Получил премию: %s\n",vacatiuonDays, prize);
         }
         if (num == 2){
             System.out.println("Вышел на работу.\n");
         }
         if (num == 3){
-            System.out.printf("Опоздал. и получил штраф %s\n", this.fine);
+            System.out.printf("Опоздал и получил штраф: %s\n", this.fine);
         }
 
     }

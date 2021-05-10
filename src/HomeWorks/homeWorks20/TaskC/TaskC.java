@@ -8,7 +8,9 @@ public class TaskC {
         for(int i =0; i < mans.length; i++){
             mans[i] = new Human();
             Employee employee = new Employee(mans[i]);
-            System.out.println(employee);
+            System.out.print(employee);
+            employee.actions();
+            System.out.println();
         }
 
     }
