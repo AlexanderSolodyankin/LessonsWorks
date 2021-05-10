@@ -1,6 +1,6 @@
 package HomeWorks.homeWorks20.TaskC;
 
-import Draft.NPSNameOreAge.NPSHuman;
+
 
 public class TaskC {
     public static void main(String[] args) {
@@ -9,7 +9,6 @@ public class TaskC {
             mans[i] = new Human();
             System.out.println(mans[i]);
             System.out.println();
-
         }
     }
 }

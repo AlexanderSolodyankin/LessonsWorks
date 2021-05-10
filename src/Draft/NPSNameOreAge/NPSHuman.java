@@ -104,7 +104,7 @@ public class NPSHuman {
         }
 
         while(true){
-            num = ran.nextInt(101);
+            num = ran.nextInt(90 - 15 + 1) + 15;
             if(num > 0){
                 this.age = num;
                 break;
