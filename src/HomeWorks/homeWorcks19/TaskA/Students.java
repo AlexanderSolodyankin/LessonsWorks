@@ -1,7 +1,7 @@
 package HomeWorks.homeWorcks19.TaskA;
 
 // Создан класс студент
-public class Students {
+ class Students {
     private String nameStudents;
     private String serNameStudents;
     private String genderStudents;

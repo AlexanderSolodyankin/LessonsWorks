@@ -2,7 +2,7 @@ package HomeWorks.homeWorcks19.TaskA;
 
 import java.util.Scanner;
 // Создал клас для определения даты рождения или какой либо даты
-public class DateFound {
+class DateFound {
 
     // Параметры данного класса
     int day;

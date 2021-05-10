@@ -1,7 +1,7 @@
 package HomeWorks.homeWorcks19.TaskA;
 
 // Создан класс "ГРУППА"
-public class Courses {
+class Courses {
 
      // Параметры Класса
      private String nameCours;

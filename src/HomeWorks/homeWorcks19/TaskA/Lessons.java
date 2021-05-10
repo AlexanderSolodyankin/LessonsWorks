@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 // Создан класс УРОКИ
-public class Lessons extends Groups{
+ class Lessons extends Groups{
     // Параметры данного класса
     String homeWorks;
     String exam;

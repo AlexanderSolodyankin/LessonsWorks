@@ -4,7 +4,7 @@ import java.util.Random;
 
 // Клас созданый для случайной генерации имен и фамилий
 // а так же и гендерного признака чтобы было проще вносить даные в студентов
-public class NSPRandom {
+ class NSPRandom {
     private String name;
     private String serName;
     private String patron;
