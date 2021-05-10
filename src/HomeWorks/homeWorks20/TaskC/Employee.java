@@ -1,5 +1,7 @@
 package HomeWorks.homeWorks20.TaskC;
 
+import java.util.Random;
+
 public class Employee extends Human{
     private String position;
     private int salary;
@@ -10,9 +12,25 @@ public class Employee extends Human{
     Human man;
 
     public Employee(Human man){
-        super();
         this.man = man;
-
+        this.salary = getNum();
+        if(this.salary < 0){
+            this.salary = getNum();
+        }
+        if(this.salary < 20000){
+            this.position = "Охраник";
+        }
+        if(this.salary > 20000 && this.salary < 30000){
+            this.position = "Официант";
+        }
+        if(this.salary > 30000 && this.salary < 90000){
+            this.position = "Повар";
+        }
+        this.prize = this.salary / 3;
+        this.fine = salary / 100;
+        this.experience = getAge() / 9;
+        this.vacatiuonDays = getAge() / 3;
+//        actions();
     }
 
     public Human getMan() {
@@ -73,6 +91,31 @@ public class Employee extends Human{
 
     @Override
     public String toString(){
-        return String.format("Сотрудник: %s. %s", man.getName(), man.getSerName());
+        return String.format("Сотрудник: %s. %s \n" +
+                "Должность: %s\n" +
+                "Опыработы : %s лет\n" +
+                "Заработная плата: %s\n", man.getName(), man.getSerName(), position, experience, salary);
+    }
+    public int getNum(){
+        Random ran = new Random();
+        int num = ran.nextInt(90000 - 5000 + 1) + 5000;
+        return num;
+    }
+
+    void actions(){
+        Random ran = new Random();
+        int num = ran.nextInt(3 - 1 + 1) + 1;
+        if(num == 1){
+            System.out.printf("Вышел в отпуск.\n" +
+                    "Получил премию: %s\n" +
+                    "Количество дней в отпуск: %s\n", prize, vacatiuonDays);
+        }
+        if (num == 2){
+            System.out.println("Вышел на работу.\n");
+        }
+        if (num == 3){
+            System.out.printf("Опоздал. и получил штраф %s\n", this.fine);
+        }
+
     }
 }

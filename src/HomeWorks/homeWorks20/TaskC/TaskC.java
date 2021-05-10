@@ -4,11 +4,12 @@ package HomeWorks.homeWorks20.TaskC;
 
 public class TaskC {
     public static void main(String[] args) {
-        Human[] mans = new Human[3];
+        Human[] mans = new Human[6];
         for(int i =0; i < mans.length; i++){
             mans[i] = new Human();
-            System.out.println(mans[i]);
-            System.out.println();
+            Employee employee = new Employee(mans[i]);
+            System.out.println(employee);
         }
+
     }
 }
