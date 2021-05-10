@@ -1,9 +1,12 @@
-package HomeWorks.homeWorks20.homeWorks1.TaskA;
+package HomeWorks.homeWorks20.TaskA;
 
+import HomeWorks.homeWorks20.TaskA.faculty.Courses;
+import HomeWorks.homeWorks20.TaskA.faculty.Groups;
+import HomeWorks.homeWorks20.TaskA.faculty.Lessons;
+import HomeWorks.homeWorks20.TaskA.helpers.DateFound;
+import HomeWorks.homeWorks20.TaskA.helpers.NSPRandom;
+import HomeWorks.homeWorks20.TaskA.objcte.Students;
 import HomeWorks.homeWorks20.homeWorks1.TaskA.faculty.*;
-import HomeWorks.homeWorks20.homeWorks1.TaskA.helpers.DateFound;
-import HomeWorks.homeWorks20.homeWorks1.TaskA.helpers.NSPRandom;
-import HomeWorks.homeWorks20.homeWorks1.TaskA.objcte.Students;
 
 import java.util.Random;
 

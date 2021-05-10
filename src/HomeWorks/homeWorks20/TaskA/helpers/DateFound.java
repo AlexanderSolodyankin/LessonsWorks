@@ -1,4 +1,4 @@
-package HomeWorks.homeWorks20.homeWorks1.TaskA.helpers;
+package HomeWorks.homeWorks20.TaskA.helpers;
 
 import java.util.Scanner;
 

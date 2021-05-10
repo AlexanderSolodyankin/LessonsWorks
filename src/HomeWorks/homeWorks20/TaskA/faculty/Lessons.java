@@ -1,9 +1,9 @@
-package HomeWorks.homeWorks20.homeWorks1.TaskA.faculty;
+package HomeWorks.homeWorks20.TaskA.faculty;
 
 // вызван метод для вписывания добавления ячеек в массив
 
-import HomeWorks.homeWorks20.homeWorks1.TaskA.helpers.DateFound;
-import HomeWorks.homeWorks20.homeWorks1.TaskA.objcte.Students;
+import HomeWorks.homeWorks20.TaskA.helpers.DateFound;
+import HomeWorks.homeWorks20.TaskA.objcte.Students;
 
 import java.util.Arrays;
 import java.util.Random;

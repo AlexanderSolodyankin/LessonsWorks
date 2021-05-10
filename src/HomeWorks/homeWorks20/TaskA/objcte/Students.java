@@ -1,6 +1,6 @@
-package HomeWorks.homeWorks20.homeWorks1.TaskA.objcte;
+package HomeWorks.homeWorks20.TaskA.objcte;
 
-import HomeWorks.homeWorks20.homeWorks1.TaskA.helpers.DateFound;
+import HomeWorks.homeWorks20.TaskA.helpers.DateFound;
 
 // Создан класс студент
 public class Students {

@@ -1,6 +1,6 @@
-package HomeWorks.homeWorks20.homeWorks1.TaskA.faculty;
+package HomeWorks.homeWorks20.TaskA.faculty;
 
-import HomeWorks.homeWorks20.homeWorks1.TaskA.helpers.DateFound;
+import HomeWorks.homeWorks20.TaskA.helpers.DateFound;
 
 // Создан класс "ГРУППА"
 public class Courses {
