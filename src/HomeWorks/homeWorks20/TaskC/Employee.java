@@ -2,7 +2,7 @@ package HomeWorks.homeWorks20.TaskC;
 
 import java.util.Random;
 
-public class Employee extends Human{
+ class Employee extends Human{
     protected String position;
     private int salary;
     private int prize;
@@ -10,9 +10,9 @@ public class Employee extends Human{
     private int experience;
     private int vacatiuonDays;
 
-    public Employee(){}
+//    public Employee(){}
 
-    public Employee(Human man){
+    public Employee(){
         this.salary = getNum();
         if(this.salary < 0){
             this.salary = getNum();

@@ -6,18 +6,25 @@ import java.util.Random;
     private boolean armed;
     private String gun;
 
-    public Security(Employee employee){
+     Security(Employee employee){
         getArmed();
         if(armed){
             Random ran = new Random();
             int num = ran.nextInt(5 - 1 + 1) + 1;
-            switch (num){
-                case 1: this.gun = "Пистолет";
-                case 2: this.gun = "Кастет";
-                case 3: this.gun = "Дезинтегратор";
-                case 4: this.gun = "Сингулярный прожектор";
-                case 5: this.gun = "Электро шокер";
-                default: this.gun = "Потерял свое оружие";
+            if(num == 1){
+                this.gun = "Дезинтегратор";
+            }
+            if(num == 2){
+                this.gun = "Шокер";
+            }
+            if(num == 3){
+                this.gun = "Пистолет";
+            }
+            if(num == 4){
+                this.gun = "Гранатомет";
+            }
+            if(num == 5){
+                this.gun = "Катана";
             }
         }else this.gun = "Без оружия";
     }
@@ -32,7 +39,9 @@ import java.util.Random;
 
      public boolean getArmed(){
         Random ran = new Random();
-        return ran.nextBoolean();
+        boolean armed = ran.nextBoolean();
+         this.armed = armed;
+        return this.armed;
     }
     @Override
      public String toString(){
