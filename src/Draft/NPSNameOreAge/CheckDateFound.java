@@ -6,9 +6,9 @@ import java.util.Scanner;
 public class CheckDateFound {
 
     // Параметры данного класса
-    int day;
-    int mounth;
-    int years;
+   private int day;
+   private int mounth;
+   private int years;
 
     public CheckDateFound(int day, int mounth, int years) {
         Scanner sc = new Scanner(System.in);

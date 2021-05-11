@@ -3,13 +3,14 @@ package HomeWorks.homeWorks20.TaskC;
 import java.util.Random;
 
 public class Employee extends Human{
-    private String position;
+    protected String position;
     private int salary;
     private int prize;
     private int fine;
-    private  int experience;
+    private int experience;
     private int vacatiuonDays;
 
+    public Employee(){}
 
     public Employee(Human man){
         this.salary = getNum();
@@ -30,6 +31,10 @@ public class Employee extends Human{
         this.experience = getAge() / 9;
         this.vacatiuonDays = getAge() / 3;
 
+    }
+
+    public Employee(String position) {
+        this.position = position;
     }
 
     public String getPosition() {

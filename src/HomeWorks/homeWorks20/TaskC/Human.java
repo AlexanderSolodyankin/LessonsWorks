@@ -4,7 +4,7 @@ package HomeWorks.homeWorks20.TaskC;
 import Draft.NPSNameOreAge.NPSHuman; // Клас для генерации случайных людей с возростом и гендерным признаком адресом
 
 
-public class Human {
+ class Human {
      private String name;
      private String serName;
      private String patronymic;
