@@ -2,7 +2,7 @@ package HomeWorks.homeWorks20.TaskC;
 
 import java.util.Random;
 
- public class Security extends Employee{
+  class Security extends Employee{
     private boolean armed;
     private String gun;
 
