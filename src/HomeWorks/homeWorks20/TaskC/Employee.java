@@ -3,37 +3,38 @@ package HomeWorks.homeWorks20.TaskC;
 import java.util.Random;
 
  class Employee extends Human{
-    protected String position;
-    private int salary;
-    private int prize;
-    private int fine;
-    private int experience;
-    private int vacatiuonDays;
+    protected String position; //позиция
+    private int salary;// зарплата
+    private int prize;// премия
+    private int fine;// штраф
+    private int experience;// опыт
+    private int vacatiuonDays;// колчество дней в отпуске
 
-//    public Employee(){}
+    public Employee(){}
 
-    public Employee(){
-        this.salary = getNum();
-        if(this.salary < 0){
-            this.salary = getNum();
-        }
-        if(this.salary < 20000){
-            this.position = "Охраник";
-        }
-        if(this.salary > 20000 && this.salary < 30000){
-            this.position = "Официант";
-        }
-        if(this.salary > 30000 && this.salary < 90000){
-            this.position = "Повар";
-        }
-        this.prize = this.salary / 3;
-        this.fine = salary / 100;
-        this.experience = getAge() / 9;
-        this.vacatiuonDays = getAge() / 3;
+     public Employee(String name, String serName, String patronymic, int age,
+                     String address, String gender, String position, int salary) {
 
-    }
+         super(name, serName, patronymic, age, address, gender);
+         this.position = position;
+         this.salary = salary;
+         this.prize = salary / 2;
+         if(position.equals("Повар")){
+             this.fine = (salary / 2) / 3;
+             this.vacatiuonDays = getAge() / 3;
+         }
+         if(position.equals("Охрана")){
+             this.fine = salary / 100;
+             this.vacatiuonDays = getAge() / 5;
+         }
+         if(position.equals("Официант")){
+             this.fine = (salary / 2) / 5;
+             this.vacatiuonDays = getAge() / 2;
+         }
 
-    public Employee(String position) {
+     }
+
+     public Employee(String position) {
         this.position = position;
     }
 
@@ -93,25 +94,19 @@ import java.util.Random;
                 "Заработная плата: %s\n", getName(), getPatronymic(), position, experience, salary);
         return string;
     }
-    public int getNum(){
-        Random ran = new Random();
-        int num = ran.nextInt(90000 - 5000 + 1) + 5000;
-        return num;
-    }
 
-    void actions(){
-        Random ran = new Random();
-        int num = ran.nextInt(3 - 1 + 1) + 1;
-        if(num == 1){
-            System.out.printf("Вышел в отпуск на %s дней.\n" +
-                    "Получил премию: %s\n",vacatiuonDays, prize);
-        }
-        if (num == 2){
-            System.out.println("Вышел на работу.\n");
-        }
-        if (num == 3){
-            System.out.printf("Опоздал и получил штраф: %s\n", this.fine);
-        }
-
-    }
+     void actions(){
+         Random ran = new Random();
+         int num = ran.nextInt(3 - 1 + 1) + 1;
+         if(num == 1){
+             System.out.printf("Вышел в отпуск на %s дней.\n" +
+                     "Получил премию: %s\n",vacatiuonDays, prize);
+         }
+         if (num == 2){
+             System.out.println("Вышел на работу.\n");
+         }
+         if (num == 3){
+             System.out.printf("Опоздал и получил штраф: %s\n", this.fine);
+         }
+     }
 }

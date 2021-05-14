@@ -1,7 +1,16 @@
 package Lessons.lessons22;
 
  class Counter {
+     private int id;
      private static int numOfCalls = 0;
+     private static int objectsCoun;
+
+     public  Counter(){
+         objectsCoun++;
+     }
+     public static int getObjectsCoun(){
+         return objectsCoun;
+     }
       static void increment(){
         Counter.numOfCalls++;
           System.out.println(numOfCalls);

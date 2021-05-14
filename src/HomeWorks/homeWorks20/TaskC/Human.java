@@ -13,13 +13,15 @@ import Draft.NPSNameOreAge.NPSHuman; // Клас для генерации сл�
      private String gender;
 
      public Human(){
-          NPSHuman  human = new NPSHuman();
-          this.name = human.getName();
-          this.serName = human.getSerName();
-          this.patronymic = human.getPatron();
-          this.age = human.getAge();
-          this.address = human.getAddress();
-          this.gender = human.getGender();
+     }
+
+     public Human(String name, String serName, String patronymic, int age, String address, String gender) {
+         this.name = name;
+         this.serName = serName;
+         this.patronymic = patronymic;
+         this.age = age;
+         this.address = address;
+         this.gender = gender;
      }
 
      public String getName() {

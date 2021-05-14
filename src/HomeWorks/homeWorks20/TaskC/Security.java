@@ -6,30 +6,17 @@ import java.util.Random;
     private boolean armed;
     private String gun;
 
-     Security(Employee employee){
-        getArmed();
-        if(armed){
-            Random ran = new Random();
-            int num = ran.nextInt(5 - 1 + 1) + 1;
-            if(num == 1){
-                this.gun = "Дезинтегратор";
-            }
-            if(num == 2){
-                this.gun = "Шокер";
-            }
-            if(num == 3){
-                this.gun = "Пистолет";
-            }
-            if(num == 4){
-                this.gun = "Гранатомет";
-            }
-            if(num == 5){
-                this.gun = "Катана";
-            }
-        }else this.gun = "Без оружия";
-    }
+      public Security(String name, String serName, String patronymic,
+                      int age, String address, String gender, String position, int salary) {
+          super(name, serName, patronymic, age, address, gender, position, salary);
+         this.armed = getRandomArmed();
+          if (this.armed){
+              getGunSecurity();
+          }else this.gun = "Без оружия";
 
-     public boolean isArmed() {
+      }
+
+      public boolean getArmed() {
          return armed;
      }
 
@@ -37,12 +24,7 @@ import java.util.Random;
          return gun;
      }
 
-     public boolean getArmed(){
-        Random ran = new Random();
-        boolean armed = ran.nextBoolean();
-         this.armed = armed;
-        return this.armed;
-    }
+
     @Override
      public String toString(){
        String outSecurety = String.format("Охраник: %s, %s \n" +
@@ -54,5 +36,23 @@ import java.util.Random;
            getFace = getFace + "Выгнал клиента";
         System.err.println(getFace);
     }
+      void  getGunSecurity() {
+          Random ran = new Random();
+          String[] gun = new String[5];
+          gun[0] = "Писталет";
+          gun[1] = "Кастет";
+          gun[2] = "Электрошокер";
+          gun[3] = "Плазмоган";
+          gun[4] = "Потерял оружие";
 
-}
+          this.gun = gun[ran.nextInt(5)];
+      }
+      private boolean getRandomArmed(){
+          Random ran = new Random();
+          boolean armed = ran.nextBoolean();
+          this.armed = armed;
+          return this.armed;
+      }
+
+
+  }
