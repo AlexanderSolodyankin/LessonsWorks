@@ -13,7 +13,6 @@ import java.util.Random;
           if (this.armed){
               getGunSecurity();
           }else this.gun = "Без оружия";
-
       }
 
       public boolean getArmed() {

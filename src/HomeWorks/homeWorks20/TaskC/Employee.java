@@ -18,6 +18,7 @@ import java.util.Random;
          super(name, serName, patronymic, age, address, gender);
          this.position = position;
          this.salary = salary;
+         this.experience = getAge() / 5;
          this.prize = salary / 2;
          if(position.equals("Повар")){
              this.fine = (salary / 2) / 3;
@@ -97,16 +98,12 @@ import java.util.Random;
 
      void actions(){
          Random ran = new Random();
-         int num = ran.nextInt(3 - 1 + 1) + 1;
-         if(num == 1){
-             System.out.printf("Вышел в отпуск на %s дней.\n" +
-                     "Получил премию: %s\n",vacatiuonDays, prize);
-         }
-         if (num == 2){
-             System.out.println("Вышел на работу.\n");
-         }
-         if (num == 3){
-             System.out.printf("Опоздал и получил штраф: %s\n", this.fine);
-         }
+         String[] actions = new String[3];
+         actions[0] = String.format("Вышел в отпуск на %s дней.\n" +
+                 "Получил премию: %s\n",vacatiuonDays, prize);
+         actions[1] = "Вышел на работу.\n";
+         actions[2] = String.format("Опоздал и получил штраф: %s\n", this.fine);
+         System.out.println(actions[ran.nextInt(3)]);
+
      }
 }

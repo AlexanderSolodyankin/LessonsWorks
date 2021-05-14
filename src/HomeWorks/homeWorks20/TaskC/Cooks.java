@@ -11,22 +11,26 @@ class Cooks extends Employee{
                  String address, String gender, String position, int salary) {
         super(name, serName, patronymic, age, address, gender, position, salary);
         Random ran = new Random();
+
         String[][] setSetup = new String[3][5];
         setSetup[0][0] = "Яишница";
         setSetup[0][1] = "Суп";
         setSetup[0][2] = "Пирог";
         setSetup[0][3] = "Салат";
         setSetup[0][4] = "Лазанья";
+
         setSetup[1][0] = "Помошник повара";
         setSetup[1][1] = "повар стажор";
         setSetup[1][2] = "Повар Бригадир";
         setSetup[1][3] = "Помошник шеф повара";
         setSetup[1][4] = "Шеф повар";
+
         setSetup[2][0] = "Самоучка";
         setSetup[2][1] = "Сертификат техникума";
         setSetup[2][2] = "Диплом";
         setSetup[2][3] = "Поддельный сертификат";
         setSetup[2][4] = "Диплом Шеф повара";
+
         this.dishes = setSetup[0][ran.nextInt(5)];
         this.spesial = setSetup[1][ran.nextInt(5)];
         this.sertific = setSetup[2][ran.nextInt(5)];
