@@ -57,10 +57,13 @@ class TaskC {
         }
 
         Client[] client = new Client[5];
-        for(int i = 0; i < cooks.length ; i++){
+        System.out.println();
+        for(int i = 0; i < client.length ; i++){
+
             NPSHuman mansClients = new NPSHuman();
             client[i] = new Client(mansClients.getName(),mansClients.getSerName(),mansClients.getPatron(),
                     mansClients.getAge(), mansClients.getAddress(), mansClients.getGender());
+            System.out.println();
         }
 
         System.err.println("Созданные рандомные люди!!!");
@@ -102,8 +105,7 @@ class TaskC {
             if(client[i].isFaceControl()){
                 System.out.println(securiti[ran.nextInt(securiti.length)] + " Пропустил " + client[i].getName() + " " +
                         client[i].getSerName());
-            }else System.err.println(securiti[ran.nextInt(securiti.length)] + " Выгнал " + client[i].getName() + " "+
-                    client[i].getSerName());
+            }else securiti[ran.nextInt(securiti.length)].kick();
         }
 
     }
