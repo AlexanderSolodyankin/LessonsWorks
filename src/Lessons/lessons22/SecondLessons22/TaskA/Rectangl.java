@@ -1,6 +1,6 @@
 package Lessons.lessons22.SecondLessons22.TaskA;
 
-public class Rectangl extends Figure{
+class Rectangl extends Figure{
     private int up;
     private int down;
 

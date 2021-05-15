@@ -1,6 +1,6 @@
 package Lessons.lessons22;
 
-public class Dogs {
+ class Dogs {
     private String name;
     private int age;
     private int weirth;
