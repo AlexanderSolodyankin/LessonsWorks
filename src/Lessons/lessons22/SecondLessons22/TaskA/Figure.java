@@ -1,6 +1,6 @@
 package Lessons.lessons22.SecondLessons22.TaskA;
 
- public class Figure{
+  class Figure{
     private LocationOfFigure location;
     private String color;
     private boolean isVisible;

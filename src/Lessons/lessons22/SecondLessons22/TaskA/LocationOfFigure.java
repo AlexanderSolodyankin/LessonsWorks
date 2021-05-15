@@ -1,6 +1,6 @@
 package Lessons.lessons22.SecondLessons22.TaskA;
 
- public class LocationOfFigure  {
+ class LocationOfFigure  {
     private int x;
     private int y;
 
