@@ -27,7 +27,7 @@ import java.util.Random;
     @Override
      public String toString(){
        String outSecurety = String.format("Охраник: %s, %s \n" +
-               "Вооружение: %s",getName(), getPatronymic(), getGun());
+               "Вооружение: %s\n",getName(), getPatronymic(), getGun());
        return  outSecurety;
     }
     void  kick(){
