@@ -14,107 +14,34 @@ public class NPSHuman {
 
     public NPSHuman(){
         Random ran = new Random();
-        int num;
-        // Случайная генерация имени ( точнее перетасовка)
-        while (true){
-            num = ran.nextInt(5 - 1 + 1) + 1;
-            if(num == 1){name = "Александр"; break;}
-            if(num == 2){name = "Юля"; break;}
-            if(num == 3){name = "Серега"; break;}
-            if(num == 4){name = "Маша"; break;}
-            if(num == 5){name = "Ксюша"; break;}
-        }
 
-        // Генерация гендерного признака что бы женские имена выдовала женщин и на оборот
-        // ( Сделано через жопу и на чистом интузиазме)
-        if(this.name.equals("Юля") || this.name.equals("Маша") || this.name.equals("Ксюша")){
+        String[][][] humans = new String[2][3][5];
+
+        humans[0][0][0] = "Маша";  humans[0][1][0] = "Сергулина";  humans[0][2][0] = "Владимировна";
+        humans[0][0][1] = "Дарья"; humans[0][1][1] = "Губанова";   humans[0][2][1] = "Александровна";
+        humans[0][0][2] = "Юля";   humans[0][1][2] = "Гричкова";   humans[0][2][2] = "Грегорьевна";
+        humans[0][0][3] = "Ксенья";humans[0][1][3] = "Зельвитская";humans[0][2][3] = "Сергеевна";
+        humans[0][0][4] = "Лариса";humans[0][1][4] = "Харингтон";  humans[0][2][4] = "Владимировна";
+
+        humans[1][0][0] = "Александр";  humans[1][1][0] = "Сергулин";  humans[1][2][0] = "Владимирович";
+        humans[1][0][1] = "Владимир"; humans[1][1][1] = "Губанов";   humans[1][2][1] = "Александрович";
+        humans[1][0][2] = "Сергей";   humans[1][1][2] = "Гричков";   humans[1][2][2] = "Грегорьевич";
+        humans[1][0][3] = "Дмитрий";humans[1][1][3] = "Зельвитский";humans[1][2][3] = "Сергеевич";
+        humans[1][0][4] = "Алексей";humans[1][1][4] = "Харингтон";  humans[1][2][4] = "Владимирович";
+        this.genMan = ran.nextBoolean();
+        if(genMan){
             this.gender = "Женский";
-            this.genMan = true;
-        }
-        else {
+            this.name    = humans[0][0][ran.nextInt(5)];
+            this.serName = humans[0][1][ran.nextInt(5)];
+            this.patron  = humans[0][2][ran.nextInt(5)];
+        }else {
             this.gender = "Мужской";
-            this.genMan = false;
+            this.name    = humans[1][0][ran.nextInt(5)];
+            this.serName = humans[1][1][ran.nextInt(5)];
+            this.patron  = humans[1][2][ran.nextInt(5)];
         }
-
-        //случайная генерация фамилии
-        while (true){
-            num = ran.nextInt(5 - 1 + 1) + 1;
-            if(num == 1){
-                if(genMan){
-                    this.serName = "Паниклова";
-                }else this.serName = "Паниклов";
-                break;
-            }
-            if(num == 2){
-                if(genMan){
-                    this.serName = "Криваручка";
-                }else this.serName = "Криваручка";
-                break;
-            }
-            if(num == 3){
-                if(genMan){
-                    this.serName = "Кулькова";
-                }else this.serName = "Кульков"; break;
-            }
-            if(num == 4){
-                if(genMan){
-                    this.serName = "Сергулина";
-                }else this.serName = "Сергулин";
-                break;
-            }
-            if(num == 1){
-                if(genMan){
-                    this.serName = "Зельвитская";
-                }else this.serName = "Зельвитский"; break;
-            }
-        }
-        // Случайноя генерация отчества ( но я его так и не использовал)
-        while (true){
-            num = ran.nextInt(5 - 1 + 1) + 1;
-            if(num == 1){
-                if(genMan){
-                    patron = "Александровна";
-                }else patron = "Александровичь";
-                break;
-            }
-            if(num == 2){
-                if(genMan){
-                    patron = "Владимировна";
-                }else patron = "Владимирович";
-                break;
-            }
-            if(num == 3){
-                if(genMan){
-                    patron = "Петровна";
-                }else patron = "Петрович";
-                break;
-            }
-            if(num == 4){
-                if(genMan){
-                    patron = "Грегорьевна";
-                }else patron = "Грегорьевич";
-                break;
-            }
-            if(num == 5){
-                if(genMan){
-                    patron = "Андреевна";
-                }else patron = "Андреевичь";
-                break;
-            }
-        }
-
-        while(true){
-            num = ran.nextInt(90 - 15 + 1) + 15;
-            if(num > 0){
-                this.age = num;
-                break;
-            }
-        }
-
+        this.age = ran.nextInt(101);
         getAddress();
-
-
-
     }
     public String getGender(){return gender;}
 
