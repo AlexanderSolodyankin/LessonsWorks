@@ -56,26 +56,19 @@ public class NPSHuman {
     public String getAddress() {
         Random ran= new Random();
         String[][] setAddress = new String[4][5];
-        setAddress[0][0] = "Киргизия ";
-        setAddress[0][1] = "Россия ";
-        setAddress[0][2] = "Америка ";
-        setAddress[0][3] = "Казахстан ";
-        setAddress[0][4] = "Манголия ";
-        setAddress[1][0] = "Бишкек ";
-        setAddress[1][1] = "Москва ";
-        setAddress[1][2] = "Вашенгтон ";
-        setAddress[1][3] = "Алма-Ата ";
-        setAddress[1][4] = "Улан-Батор ";
-        setAddress[2][0] = "Скрябина ";
-        setAddress[2][1] = "Зодчего ";
-        setAddress[2][2] = "Уолл-Стрит ";
-        setAddress[2][3] = "Тергеусизова ";
-        setAddress[2][4] = "Урге ";
-        setAddress[3][0] = "Дом 56 ";
-        setAddress[3][1] = "Дом 109 ";
-        setAddress[3][2] = "Дом 32 ";
-        setAddress[3][3] = "Дом 44 ";
-        setAddress[3][4] = "Дом 78 ";
+
+        setAddress[0][0] = "Киргизия ";             setAddress[1][0] = "Бишкек ";
+        setAddress[0][1] = "Россия ";               setAddress[1][1] = "Москва ";
+        setAddress[0][2] = "Америка ";              setAddress[1][2] = "Вашенгтон ";
+        setAddress[0][3] = "Казахстан ";            setAddress[1][3] = "Алма-Ата ";
+        setAddress[0][4] = "Манголия ";             setAddress[1][4] = "Улан-Батор ";
+
+        setAddress[2][0] = "Скрябина ";             setAddress[3][0] = "Дом 56 ";
+        setAddress[2][1] = "Зодчего ";              setAddress[3][1] = "Дом 109 ";
+        setAddress[2][2] = "Уолл-Стрит ";           setAddress[3][2] = "Дом 32 ";
+        setAddress[2][3] = "Тергеусизова ";         setAddress[3][3] = "Дом 44 ";
+        setAddress[2][4] = "Урге ";                 setAddress[3][4] = "Дом 78 ";
+
         this.address = setAddress[0][ran.nextInt(5)] + setAddress[1][ran.nextInt(5)] +
                 setAddress[2][ran.nextInt(5)] +setAddress[3][ran.nextInt(5)];
         return address;
