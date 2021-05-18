@@ -1,6 +1,6 @@
 package Lessons.lessons24.FerstTask;
 
- public class LocationFigure {
+ class LocationFigure {
      private int x;
      private int y;
 

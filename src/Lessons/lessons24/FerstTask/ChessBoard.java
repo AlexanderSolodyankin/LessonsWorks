@@ -1,6 +1,6 @@
 package Lessons.lessons24.FerstTask;
 
-public class ChessBoard {
+ class ChessBoard {
     private Ractangle[][] fields = new Ractangle[8][8];
     private Circle[] circles = new Circle[12];
 

@@ -2,7 +2,7 @@ package Lessons.lessons24.FerstTask;
 
 import java.awt.*;
 
-public class Figure {
+ class Figure {
     private LocationFigure location;
     private Color colore;
     private boolean isVisible;

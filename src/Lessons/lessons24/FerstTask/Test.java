@@ -5,7 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
 
-public class Test extends Canvas {
+ class Test extends Canvas {
     static final Color DARK = Color.BLACK;
     static final Color LIGHT = Color.LIGHT_GRAY;
     static final Color CIRCLE_COLOR = Color.RED;

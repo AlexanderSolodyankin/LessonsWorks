@@ -2,7 +2,7 @@ package Lessons.lessons24.FerstTask;
 
 import java.awt.*;
 
-public final class Ractangle extends Figure {
+ final class Ractangle extends Figure {
     private static int coutOfRectangle;
     private static int countOfSquares;
 

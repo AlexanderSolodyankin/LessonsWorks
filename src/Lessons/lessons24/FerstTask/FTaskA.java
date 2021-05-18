@@ -2,7 +2,7 @@ package Lessons.lessons24.FerstTask;
 
 import java.awt.*;
 
-public class FTaskA {
+ class FTaskA {
     public static void main(String[] args) {
         ChessBoard chessBoard = new ChessBoard();
         for (int i = 0; i < 8; i++) {
