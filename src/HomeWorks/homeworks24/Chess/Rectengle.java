@@ -15,6 +15,19 @@ import java.awt.*;
 
     private int weidth;
      private int height;
+     /**
+      *  Забыл доьавить счетчик на то что что подсчитать сколько кубиков или прямоугольников
+      * */
+
+     private static int countRec;
+     private  static int countSquar;
+
+     public static int getCountRec(){return countRec;}
+    public static int getCountSquar(){return countSquar;}
+    /**
+     * -----------------------------------------------------------------------------------------------------------
+     **/
+
 
     protected Rectengle(LocationFigureDraft local, Color col, boolean inVis, int weidth, int height) {
         super(local, col, inVis);

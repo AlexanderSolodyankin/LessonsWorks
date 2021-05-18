@@ -50,7 +50,9 @@ import java.awt.*;
  }
 
  // Создаю метод speak возврощаюший информацию о фигуре
- public String speak(){return String.format("Положение по Оси Х: %s  и Оси У: %s\n" +
+ public String speak(){
+
+     return String.format("Положение по Оси Х: %s  и Оси У: %s\n" +
          "Цвет фигруы: %s\n" +
          "Виднали фигура: \n", local.getX(), local.getY(), col, inVis ? "Видна" : "Не видна");}
                                      // В конце строки используется логика используя булиян переменную для вывода
