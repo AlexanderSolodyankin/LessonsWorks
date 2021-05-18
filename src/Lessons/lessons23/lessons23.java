@@ -2,7 +2,7 @@ package Lessons.lessons23;
 
 import java.util.Arrays;
 
-public class lessons23 {
+ class lessons23 {
     public static void main(String[] args) {
         final int[] arraFinal = new int[10];
         for ( int i =0 ; i< arraFinal.length; i++){
