@@ -1,14 +1,18 @@
 package Draft;
 
+import java.util.Random;
+
 public class Draft {
     public static void main(String[] args) {
-        Animal anim = new Animal("2", "3");
+        Random ran = new Random();
+        int[] numArrey = new int[ran.nextInt(10 - 2 + 1) + 2];
+        for (int i =0;i < numArrey.length;i++){
+            numArrey[i] = ran.nextInt(100 - (-100) + 1) + (-100);
+        }
 
-        Cats cat = new Cats("4", "6", "2");
 
-        System.out.println(anim);
-        System.out.println(cat);
-
+    }
+    void setSumm(int[] num){
 
     }
 }
