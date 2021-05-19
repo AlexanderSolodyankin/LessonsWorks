@@ -17,12 +17,16 @@ import java.awt.*;
   */
     private LocationFigureDraft local;
     private Color col;
-    private boolean inVis;
+    private boolean isVis;
 
-    protected FigureChess(LocationFigureDraft local, Color col, boolean inVis){
+    protected FigureChess(LocationFigureDraft local, Color col){
      this.local = local;
      this.col = col;
-     this.inVis = inVis;
+     if(col != null){
+         this.isVis = true;
+     }else{
+         this.isVis = false;
+     }
     }
 
  public LocationFigureDraft getLocal() {
@@ -41,12 +45,12 @@ import java.awt.*;
   this.col = col;
  }
 
- public boolean isInVis() {
-  return inVis;
+ public boolean isVis() {
+  return isVis;
  }
 
- public void setInVis(boolean inVis) {
-  this.inVis = inVis;
+ public void setVis(boolean vis) {
+  this.isVis = vis;
  }
 
  // Создаю метод speak возврощаюший информацию о фигуре
@@ -54,7 +58,7 @@ import java.awt.*;
 
      return String.format("Положение по Оси Х: %s  и Оси У: %s\n" +
          "Цвет фигруы: %s\n" +
-         "Виднали фигура: \n", local.getX(), local.getY(), col, inVis ? "Видна" : "Не видна");}
+         "Виднали фигура: \n", local.getX(), local.getY(), col, isVis ? "Видна" : "Не видна");}
                                      // В конце строки используется логика используя булиян переменную для вывода
 
  /*

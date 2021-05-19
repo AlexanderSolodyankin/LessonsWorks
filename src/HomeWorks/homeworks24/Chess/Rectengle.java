@@ -30,10 +30,20 @@ import java.awt.*;
 
 
     protected Rectengle(LocationFigureDraft local, Color col, boolean inVis, int weidth, int height) {
-        super(local, col, inVis);
+        // конструктор дял создания прямоугольника
+        super(local, col);
         this.height = height;
         this.weidth = weidth;
+        countRec++;
     }
+
+    protected Rectengle(int sideOfSquare, LocationFigureDraft loc, Color col){
+        super(loc,col);
+        this.weidth = sideOfSquare;
+        this.height = sideOfSquare;
+        countSquar++;
+    }
+
 
     public int getWeidth() {
         return weidth;
