@@ -7,7 +7,7 @@ import java.awt.*;
  * действие второе
  */
 
- class Rectengle extends FigureChess{
+ class RectengleDraft extends FigureChess{
     /**
      * Создали класс прямоугольник и наследовали параметры от класса фигура
      * и добавили новые свойства ( расширили класс фигура)
@@ -29,7 +29,7 @@ import java.awt.*;
      **/
 
 
-    protected Rectengle(LocationFigureDraft local, Color col, boolean inVis, int weidth, int height) {
+    protected RectengleDraft(LocationFigureDraft local, Color col, boolean inVis, int weidth, int height) {
         // конструктор дял создания прямоугольника
         super(local, col);
         this.height = height;
@@ -37,7 +37,7 @@ import java.awt.*;
         countRec++;
     }
 
-    protected Rectengle(int sideOfSquare, LocationFigureDraft loc, Color col){
+    protected RectengleDraft(int sideOfSquare, LocationFigureDraft loc, Color col){
         super(loc,col);
         this.weidth = sideOfSquare;
         this.height = sideOfSquare;
@@ -69,4 +69,8 @@ import java.awt.*;
             return String.format("Прямоугольник: %s  Высота: %s, Ширина: %s", super.speak(), weidth, height);
         }
     }
+    /**
+     * Закончили с созданием класса прямоугольник
+     * теперь переходим к странице 4 на которой будем создовать игровую доску
+     */
 }
