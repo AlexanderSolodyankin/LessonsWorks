@@ -39,6 +39,7 @@ import java.util.Random;
 
     public void setHomeComs(AtHomes[] atHomes) {
         // Квартальный выбирается из собрания упровляющих домами
+
         Residents[] housComs = new Residents[0];
         for(int i = 0; i < atHomes.length; i++){
             housComs = Arrays.copyOf(housComs,housComs.length + 1);

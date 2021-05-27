@@ -10,20 +10,22 @@ class Test {
         Village village2 = new Village(); // Создано второе село
         System.out.println(village1); // вывод информации села на консоль
         System.out.println(village2);// вывод информации села на консоль
-        City[] citys = new City[4]; // создано 4 города
+        City[] citys = new City[4]; // создано 4 города а вот тут надо разобрать поподробнее
         for (int i = 0; i < citys.length; i++) {
             citys[i] = new City(); // Задаю значение каждому городу
         }
-        for (int i = 0; i < citys.length;i++ ){ // Вывод информации городов для проверки поиска по упровляющему района
-            for(int j = 0; j< citys[i].getUrbanAreas().length; j++){
-                System.out.println(citys[i].getUrbanAreas()[j].getLider()); // чтобы было легче искать
+        for (int i = 0; i < citys.length; i++) {
+            // Вывод информации городов для проверки поиска по упровляющему района
+            for (int j = 0; j < citys[i].getUrbanAreas().length; j++) {
+                System.out.println(citys[i].getUrbanAreas()[j].getLider());
             }
         }
-            System.out.print("Введите имя упровляющего районом для поиска: ");
+        System.out.print("Введите имя упровляющего районом для поиска: ");
         String name = sc.nextLine();
         System.out.print("Введите фамилию упровляющего районом для поиска: ");
         String serName = sc.nextLine();
-        for (int i = 0; i < citys.length; i++) { // цикл для сравнения значения и вывода информации по поиску
+
+        for (int i = 0; i < citys.length; i++) {
             for (int j = 0; j < citys[i].getUrbanAreas().length; j++) {
                 if (citys[i].getUrbanAreas()[j].getLider().getName().equals(name) &&
                         citys[i].getUrbanAreas()[j].getLider().getSerName().equals(serName)) {
@@ -33,9 +35,5 @@ class Test {
                 }
             }
         }
-
-
     }
-
-
 }
