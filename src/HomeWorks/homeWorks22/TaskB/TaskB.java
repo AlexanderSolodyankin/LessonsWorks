@@ -1,4 +1,4 @@
-package HomeWorks.homeworks22.TaskB;
+package HomeWorks.homeWorks22.TaskB;
 
 public class TaskB {
     /**

@@ -9,6 +9,7 @@ class TaskA {
 
     }
    static void outActObject(Actable act){
-        act.act();
+
+        act.act(); // абстрактный метод
     }
 }

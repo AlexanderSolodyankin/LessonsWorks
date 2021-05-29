@@ -1,4 +1,4 @@
-package HomeWorks.homeworks22.TaskA;
+package HomeWorks.homeWorks22.TaskA;
 
 import Draft.NPSNameOreAge.CheckDateFound;
 

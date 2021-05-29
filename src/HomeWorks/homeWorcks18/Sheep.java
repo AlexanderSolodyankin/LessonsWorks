@@ -1,4 +1,4 @@
-package HomeWorks.homeworcks18;
+package HomeWorks.homeWorcks18;
 
 public class Sheep {
     private int weight;

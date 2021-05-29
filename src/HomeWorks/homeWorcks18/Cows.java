@@ -1,14 +1,14 @@
-package HomeWorks.homeworcks18;
+package HomeWorks.homeWorcks18;
 
-public class Horse {
+public class Cows {
     private int weight;
     private int age;
     private String gender;
     private String name;
 
-    private Horse(){}
+    private Cows(){}
 
-    public Horse(int weight, int age, String gender, String name) {
+    public Cows(int weight, int age, String gender, String name) {
         this.weight = weight;
         this.age = age;
         this.gender = gender;
@@ -49,9 +49,9 @@ public class Horse {
 
     @Override
     public String toString() {
-        return String.format("\nЛошадь: %s " +
-                "\nВозраст: %s" +
-                "\nПол: %s " +
-                "\nВес: %s \n", name, age, gender, weight);
+        return String.format("\nКорова: %s " +
+                             "\nВозраст: %s" +
+                             "\nПол: %s " +
+                             "\nВес: %s \n", name, age, gender, weight);
     }
 }

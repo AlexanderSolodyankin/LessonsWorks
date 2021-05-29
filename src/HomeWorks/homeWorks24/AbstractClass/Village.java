@@ -1,4 +1,4 @@
-package HomeWorks.homeworks24.AbstractClass;
+package HomeWorks.homeWorks24.AbstractClass;
 
 public class Village extends Locality{
     // создано село которое наследует параметры из населенного пункта

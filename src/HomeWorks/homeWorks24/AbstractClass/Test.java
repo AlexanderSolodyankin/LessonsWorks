@@ -1,4 +1,4 @@
-package HomeWorks.homeworks24.AbstractClass;
+package HomeWorks.homeWorks24.AbstractClass;
 
 
 import java.util.Scanner;

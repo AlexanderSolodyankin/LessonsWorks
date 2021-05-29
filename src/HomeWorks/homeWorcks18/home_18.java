@@ -1,6 +1,4 @@
-package HomeWorks.homeworcks18;
-
-import Lessons.lessons19.Student;
+package HomeWorks.homeWorcks18;
 
 import java.util.Scanner;
 
