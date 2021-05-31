@@ -1,23 +1,63 @@
 package HomeWorks.homeWorks26.TaskA;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
+import javax.sound.midi.Soundbank;
 
-class Monkey implements Actionable {
+public class Monkey extends AbstractAnumal implements  ActiveLIve{
+    private AbstractAnumal animal;
 
 
-  @Override
-  public void climb() {
-   System.out.println("карабкается");
-  }
+    public Monkey(String name, int weight, AbstractPlants plants, AbstractAnumal animal) {
+        super(name, weight, plants);
+        this.animal = animal;
+    }
 
-  @Override
-  public void hold() {
-   System.out.println("Держится");
-  }
+    public AbstractAnumal getAnimal() {
+        return animal;
+    }
 
-  @Override
-  public void eat() {
-   System.out.println("Кушает");
+    public void setAnimal(AbstractAnumal animal) {
+        this.animal = animal;
+    }
 
-  }
- }
+    @Override
+    public String toString(){
+        return "Обезьяна: " + getName() + "\nВес обезьяны: " + getWeight() ;
+    }
+
+    @Override
+    public void clime() {
+        ActiveLIve.super.clime();
+    }
+
+    @Override
+    public void drag() {
+        if(animal != null ){
+            if(animal.getWeight() < this.getWeight()) {
+                System.out.printf("На обезьяне сидит: %s", animal.toString());
+            }
+            if (animal.getWeight() > this.getWeight()){
+                System.out.println("Обезьяну раздовил " + animal);
+            }
+        }
+        else {
+            System.out.println("На обезьяне никого нет");
+        }
+
+    }
+
+    @Override
+    public void eat() {
+        if(getPlants() != null){
+            if (getPlants().isEating()){
+                System.out.println("Кушает: " + getPlants());
+            }
+            else {
+                System.out.println("Расматривает: " + getPlants());
+            }
+        }
+        else {
+            System.out.println("Ищит еду");
+        }
+
+    }
+}

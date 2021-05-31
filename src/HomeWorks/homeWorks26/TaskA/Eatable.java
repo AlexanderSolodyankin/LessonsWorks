@@ -1,5 +1,7 @@
 package HomeWorks.homeWorks26.TaskA;
 
- interface Eatable {
-     void eat();
+interface Eatable {
+    default void eat(){
+        System.out.println("Кушает: ");
+    }
 }
