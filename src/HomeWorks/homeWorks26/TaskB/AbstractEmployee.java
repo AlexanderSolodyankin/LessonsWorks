@@ -1,6 +1,6 @@
 package HomeWorks.homeWorks26.TaskB;
 
-abstract  class AbstractEmployee implements Actionable{
+abstract  class AbstractEmployee implements Actionable{// Абстрактный класс сотрудника
     private String name;
     private int age;
     private int wage;
