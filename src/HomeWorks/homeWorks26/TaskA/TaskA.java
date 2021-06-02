@@ -7,5 +7,6 @@ public class TaskA {
         monkey.drag();
         monkey.clime();
         monkey.eat();
+
     }
 }
