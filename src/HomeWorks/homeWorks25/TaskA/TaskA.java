@@ -7,9 +7,10 @@ class TaskA {
         outActObject(bread);
         outActObject(circle);
 
+
+
     }
    static void outActObject(Actable act){
-
         act.act(); // абстрактный метод
     }
 }

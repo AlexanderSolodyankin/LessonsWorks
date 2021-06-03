@@ -9,6 +9,7 @@ class TaskA {
         int num;
         Object[] arrayObjekts = new Object[8];
 
+
         arrayObjekts[0] = new Cats("Кошка");
         arrayObjekts[1] = new Ducks("Утка");
         arrayObjekts[2] = new Human("Человек");
