@@ -1,6 +1,6 @@
 package HomeWorks.homeWorks27.TaskA;
 
-class Whales extends AbstractObjects  implements Swimanble{
+class Whales implements Swimanble{
     private String name;
 
     public Whales(String name) {

@@ -1,6 +1,6 @@
 package HomeWorks.homeWorks27.TaskA;
 
- class Cats extends AbstractObjects implements Runable {
+ class Cats implements Runable {
     private String name;
 
     public Cats(String name) {

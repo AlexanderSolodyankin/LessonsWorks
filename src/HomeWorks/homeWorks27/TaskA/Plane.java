@@ -1,6 +1,6 @@
 package HomeWorks.homeWorks27.TaskA;
 
- class Plane extends AbstractObjects  implements Flyinable{
+ class Plane implements Flyinable{
      private String name;
 
      public Plane(String name) {

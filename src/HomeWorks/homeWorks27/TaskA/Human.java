@@ -1,6 +1,6 @@
 package HomeWorks.homeWorks27.TaskA;
 
- class Human extends AbstractObjects  implements  Swimanble, Runable {
+ class Human implements  Swimanble, Runable {
      private String name;
 
      public Human(String name) {

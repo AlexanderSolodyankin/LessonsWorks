@@ -1,6 +1,6 @@
 package HomeWorks.homeWorks27.TaskA;
 
- class Ducks extends AbstractObjects  implements Flyinable, Swimanble {
+ class Ducks implements Flyinable, Swimanble {
     private String name;
 
     public Ducks(String name) {

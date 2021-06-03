@@ -7,7 +7,7 @@ class TaskA {
     public static void main(String[] args) {
         Random ran = new Random();
         int num;
-        AbstractObjects[] arrayObjekts = new AbstractObjects[8];
+        Object[] arrayObjekts = new Object[8];
 
         arrayObjekts[0] = new Cats("Кошка");
         arrayObjekts[1] = new Ducks("Утка");
@@ -23,7 +23,7 @@ class TaskA {
         Swimanble[] swimanbles = new Swimanble[0];
 
         for(int i = 0; i < arrayObjekts.length;i++){
-            if(arrayObjekts[i] instanceof Flyinable){
+            if(arrayObjekts[i] instanceof Flyinable && arrayObjekts[i] != null){
                 flyinables = Arrays.copyOf(flyinables,flyinables.length + 1);
                 flyinables[flyinables.length - 1] = (Flyinable) arrayObjekts[i];
             }
@@ -44,6 +44,8 @@ class TaskA {
         System.out.println();
         System.out.println("Плавающие: " + swimanbles.length);
         outSwimanbale(swimanbles);
+
+
     }
     static void outFlynable(Flyinable[] array){
         for(Flyinable getArrays: array){

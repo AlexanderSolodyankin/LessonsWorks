@@ -1,6 +1,6 @@
 package HomeWorks.homeWorks27.TaskA;
 
- class Parrots extends AbstractObjects  implements Flyinable, Runable{
+ class Parrots implements Flyinable, Runable{
   private String name;
 
   public Parrots(String name) {

@@ -1,6 +1,6 @@
 package HomeWorks.homeWorks27.TaskA;
 
- class Sharks extends AbstractObjects  implements Swimanble{
+ class Sharks implements Swimanble{
      private String name;
 
      public Sharks(String name) {

@@ -3,7 +3,7 @@ package HomeWorks.homeWorks24.AbstractClass;
 import java.util.Arrays;
 import java.util.Random;
 
-public class City { // Клас город
+ class City { // Клас город
     // в себе имеет значения
     private UrbanAreas[] urbanAreas; // масив из районов
     private Residents[] parlament; // парламент состоящий из лидеров районов
