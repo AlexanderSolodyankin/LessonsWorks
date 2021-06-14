@@ -16,6 +16,8 @@ public class Main {
         File file = new File(setNameFile); // открыл клас для того чтобы переименовать файл
         newFile.close(); // закрыл файл
 
+        ////////////////////////////////////////////////
+
 
         System.out.println("Был создайн файл: " + file.getName());
         String filePath = file.getName(); // передаю имя файла в строкове значение для его переопределения
