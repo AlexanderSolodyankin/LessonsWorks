@@ -1,4 +1,4 @@
-package HomeWorks.homeWorks30.homeWorks29.TaskA;
+package HomeWorks.homeWorks29.TaskA;
 
 import java.io.*;
 import java.util.Scanner;

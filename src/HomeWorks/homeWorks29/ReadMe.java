@@ -1,4 +1,4 @@
-package HomeWorks.homeWorks30.homeWorks29;
+package HomeWorks.homeWorks29;
 
 public class ReadMe {
     /**
