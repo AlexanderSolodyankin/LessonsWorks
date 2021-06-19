@@ -1,19 +1,31 @@
 package Draft;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.util.Random;
-import java.util.Scanner;
+
+import Draft.NPSNameOreAge.NPSHuman;
+
+import java.util.ArrayList;
 
 class Draft {
-    public static void main(String[] args) throws FileNotFoundException {
-        File file  = new File("Song_1.txt");
-        System.out.println(file.length());
-        FileReader fileReader = new FileReader("Song_1.txt");
-        Scanner sc = new Scanner(fileReader);
+    public static void main(String[] args) {
 
-        System.out.println(sc.nextLine());
+       ArrayList<String> text = new ArrayList<>();
+
+       text.add("Первая строка");
+       text.add("Первая строка");
+       text.add(" вторая строка");
+       text.add(" вторая строка");
+       text.add(" третья строка");
+       text.add(" третья строка");
+       text.add(" четвертая строка");
+       text.add(" четвертая строка");
+
+        System.out.println(text);
+
+        text.addAll(text);
+        System.out.println(text);
+
+        ArrayList<String> text2 = new ArrayList<>();
+
 
 
 
