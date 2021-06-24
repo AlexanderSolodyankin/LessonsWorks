@@ -1,4 +1,4 @@
-package Lessons.lesson16.lesson16;
+package Lessons.lissons34;
 
  class Cat {
     String name;

@@ -59,6 +59,7 @@ class MyWorks {
             int contents = 0;
           for(int j =0; j < checkLine.length();j++){
               contents = 0;
+
              if(j + 1 < checkLine.length()){
                  if(checkLine.charAt(j + 1) == checkLine.charAt(j)){
                      contents ++;
