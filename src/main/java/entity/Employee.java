@@ -20,4 +20,8 @@ public class Employee {
     private String name;
     @Column(nullable = false)
     private Integer age;
+
+    @OneToOne
+    @JoinColumn(name = "employee_address_id")
+    private EmployeeAddress employeeAddress;
 }

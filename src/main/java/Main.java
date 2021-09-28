@@ -1,4 +1,5 @@
 import entity.Employee;
+import entity.EmployeeAddress;
 import org.hibernate.Session;
 import util.HibernateUtil;
 
@@ -8,32 +9,35 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 //
-//       Employee employee = Employee.builder().name("Alexander").age(30).build();
-       Employee employee2 = Employee.builder().name("Alex").age(30).build();
+        EmployeeAddress employeeAddress = new EmployeeAddress();
+        employeeAddress.setAddress("Ахунбаева");
+       Employee employee = Employee.builder().name("Alexander").age(30).build();
+       employee.setEmployeeAddress(employeeAddress);
+//       Employee employee2 = Employee.builder().name("Alex").age(30).build();
 //       Employee employee3 = Employee.builder().name("Alina").age(30).build();
 //       Employee employee4 = Employee.builder().name("Kuvat").age(30).build();
 //       Employee employee5 = Employee.builder().name("Xander").age(30).build();
 //       Employee employee6 = Employee.builder().name("Liza").age(30).build();
 
-       Long num;
+//       Long num;
 //
-//       num =     create(employee);
+          create(employee);
 //       num = create(employee2);
 //       num = create(employee3);
 //       num = create(employee4);
 //       num = create(employee5);
 //       num = create(employee6);
 
-               employee2.setId(3L);
-               employee2.setName("Updeite");
-
-//        List<Employee> listEmploye = readAll();
-//        System.out.println(listEmploye);
-
-//        update(employee2);
-
-//        System.out.println(delete(3L));
-        deletAll();
+//               employee2.setId(3L);
+//               employee2.setName("Updeite");
+//
+////        List<Employee> listEmploye = readAll();
+////        System.out.println(listEmploye);
+//
+////        update(employee2);
+//
+////        System.out.println(delete(3L));
+//        deletAll();
     }
 
     public static Long create(Employee e){
