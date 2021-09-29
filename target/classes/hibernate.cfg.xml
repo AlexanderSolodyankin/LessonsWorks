@@ -4,7 +4,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost/postgres</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://Localhost:5432/postgres</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">7809</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
@@ -12,8 +12,13 @@
         <property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
         <property name="hibernate.enable_lazy_load_no_trans">true</property>
         <property name="show_sql">true</property>
-        <mapping class="entity.Employee"/>
-        <mapping class="entity.EmployeeAddress"/>
+<!--        <mapping class="entity.Employee"/>-->
+<!--        <mapping class="entity.EmployeeAddress"/>-->
+        <mapping class="entity.User"/>
+        <mapping class="entity.Followes"/>
+        <mapping class="entity.Like"/>
+        <mapping class="entity.Post"/>
+        <mapping class="entity.Comment"/>
 
     </session-factory>
 </hibernate-configuration>
