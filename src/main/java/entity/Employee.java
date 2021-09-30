@@ -16,7 +16,7 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(name = "full_name", nullable = false, unique = true)
+    @Column(name = "full_name")
     private String name;
     @Column(nullable = false)
     private Integer age;

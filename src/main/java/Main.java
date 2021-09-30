@@ -1,16 +1,29 @@
+import entity.Employee;
 import entity.User;
 import org.hibernate.Session;
 import util.HibernateUtil;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        User user = new User();
-        user.setAge(30);
-        user.setName("Alexander");
-        user.setLogin("Ker Tak");
-        user.setPassword("7809");
+        Employee user1 = Employee.builder().name("Alexander").age(34).build();
+        Employee user2 = Employee.builder().name("Daniel").age(34).build();
+        Employee user3 = Employee.builder().name("Vova").age(34).build();
+        Employee user4 = Employee.builder().name("Ohra").age(34).build();
+        Employee user5 = Employee.builder().name("Alexander").age(54).build();
 
-        seveEntit(user);
+
+        seveEntit(user1);
+        seveEntit(user2);
+        seveEntit(user3);
+        seveEntit(user4);
+        seveEntit(user5);
+
+        List<Employee> list = readAllWhereName();
+
+
+        System.out.println(list);
 
 
 
@@ -25,14 +38,32 @@ public class Main {
         System.out.println("Успех!!! " + entiti.toString());
     }
 
-//    public static List<Employee> readAll(){
-//        Session hibernateSession = HibernateUtil.getSessionFactory().openSession();
-//        //@SuppressWarnings("unchecked")
-//        List<Employee> employees = hibernateSession.createQuery("FROM Employee").list();
-//        hibernateSession.close();
-//        System.out.println("Найденно " + employees.size() + " Сотрудников");
-//        return employees;
-//    }
+    public static List<Employee> readAll(){
+        Session hibernateSession = HibernateUtil.getSessionFactory().openSession();
+        //@SuppressWarnings("unchecked")
+        List<Employee> employees = hibernateSession.createQuery("FROM Employee").list();
+        hibernateSession.close();
+        System.out.println("Найденно " + employees.size() + " Сотрудников");
+        return employees;
+    }
+    public static List<Employee> readAllWhere(){
+        Session hibernateSession = HibernateUtil.getSessionFactory().openSession();
+        //@SuppressWarnings("unchecked")
+        List<Employee> employees = hibernateSession.createQuery("FROM Employee where name = : pname",Employee.class).
+        setParameter("pname", "Alexander").list();
+        hibernateSession.close();
+        System.out.println("Найденно " + employees.size() + " Сотрудников");
+        return employees;
+    }
+    public static List<Employee> readAllWhereName(){
+        Session hibernateSession = HibernateUtil.getSessionFactory().openSession();
+        //@SuppressWarnings("unchecked")
+        List<Employee> employees = hibernateSession.createQuery("FROM Employee where name like :pname",Employee.class).
+                setParameter("pname", "D%").list();
+        hibernateSession.close();
+        System.out.println("Найденно " + employees.size() + " Сотрудников");
+        return employees;
+    }
 //
 //    public static void update(Employee e){
 //        Session session = HibernateUtil.getSessionFactory().openSession();
