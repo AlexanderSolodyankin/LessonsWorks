@@ -14,6 +14,7 @@
         <property name="show_sql">true</property>
         <mapping class="entity.Employee"/>
         <mapping class="entity.EmployeeAddress"/>
+        <mapping class="entity.Contrys"/>
 <!--        <mapping class="entity.User"/>-->
 <!--        <mapping class="entity.Followes"/>-->
 <!--        <mapping class="entity.Like"/>-->

@@ -21,6 +21,10 @@ public class Employee {
     @Column(nullable = false)
     private Integer age;
 
+    @ManyToOne
+    @JoinColumn(name = "contry_id")
+    private Contrys contry;
+
     @OneToOne
     @JoinColumn(name = "employee_address_id")
     private EmployeeAddress employeeAddress;

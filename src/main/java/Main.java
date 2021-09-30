@@ -1,5 +1,5 @@
+import entity.Contrys;
 import entity.Employee;
-import entity.User;
 import org.hibernate.Session;
 import util.HibernateUtil;
 
@@ -7,11 +7,28 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Employee user1 = Employee.builder().name("Alexander").age(34).build();
-        Employee user2 = Employee.builder().name("Daniel").age(34).build();
-        Employee user3 = Employee.builder().name("Vova").age(34).build();
-        Employee user4 = Employee.builder().name("Ohra").age(34).build();
-        Employee user5 = Employee.builder().name("Alexander").age(54).build();
+
+
+        Contrys contry1 = Contrys.builder().nameContry("KG").build();
+        Contrys contry2 = Contrys.builder().nameContry("ru").build();
+        Contrys contry3 = Contrys.builder().nameContry("ch").build();
+        Contrys contry4 = Contrys.builder().nameContry("KZ").build();
+        Contrys contry5 = Contrys.builder().nameContry("Eu").build();
+        seveEntit(contry1);
+        seveEntit(contry2);
+        seveEntit(contry3);
+        seveEntit(contry4);
+        seveEntit(contry5);
+
+        Employee user1 = Employee.builder().name("Alexander").age(34).contry(contry1).build();
+        Employee user2 = Employee.builder().name("Daniel").age(34).contry(contry2).build();
+        Employee user3 = Employee.builder().name("Vova").age(34).contry(contry3).build();
+        Employee user4 = Employee.builder().name("Ohra").age(34).contry(contry4).build();
+        Employee user5 = Employee.builder().name("Alexander").contry(contry5).age(54).build();
+
+
+
+
 
 
         seveEntit(user1);
@@ -20,7 +37,7 @@ public class Main {
         seveEntit(user4);
         seveEntit(user5);
 
-        List<Employee> list = readAllWhereName();
+        List<Employee> list = readAllWhereContry();
 
 
         System.out.println(list);
@@ -60,6 +77,17 @@ public class Main {
         //@SuppressWarnings("unchecked")
         List<Employee> employees = hibernateSession.createQuery("FROM Employee where name like :pname",Employee.class).
                 setParameter("pname", "D%").list();
+        hibernateSession.close();
+        System.out.println("Найденно " + employees.size() + " Сотрудников");
+        return employees;
+    }
+
+    public static List<Employee> readAllWhereContry(){
+        Session hibernateSession = HibernateUtil.getSessionFactory().openSession();
+        //@SuppressWarnings("unchecked")
+        List<Employee> employees = hibernateSession.
+                createQuery("FROM Employee e where e.contry.nameContry = :contryName",Employee.class).
+                setParameter("contryName", "KG").list();
         hibernateSession.close();
         System.out.println("Найденно " + employees.size() + " Сотрудников");
         return employees;
