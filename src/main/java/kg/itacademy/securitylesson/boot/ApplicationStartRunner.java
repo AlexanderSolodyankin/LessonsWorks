@@ -18,11 +18,11 @@ public class ApplicationStartRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        User admin = new User();
-        admin.setUsername("admin");
-        admin.setPassword("1234");
-        admin.setUserInfo("Администратор");
-        admin.setIsActive(1L);
-        userService.create(admin);
+//        User admin = new User();
+//        admin.setUsername("admin");
+//        admin.setPassword("1234");
+//        admin.setUserInfo("Администратор");
+//        admin.setIsActive(1L);
+//        userService.create(admin);
     }
 }
