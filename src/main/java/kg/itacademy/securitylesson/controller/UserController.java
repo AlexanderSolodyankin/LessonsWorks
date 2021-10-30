@@ -1,8 +1,10 @@
 package kg.itacademy.securitylesson.controller;
 
 import kg.itacademy.securitylesson.entity.User;
+import kg.itacademy.securitylesson.model.UserAuthModel;
 import kg.itacademy.securitylesson.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,6 +28,11 @@ public class UserController {
     @GetMapping("/get-current")
     public User getCurrentUser() {
         return userService.getCurrentUser();
+    }
+
+    @PostMapping("/sign-in")
+    public ResponseEntity<String> signIn(@RequestBody UserAuthModel userAuthModel) {
+        return ResponseEntity.ok(userService.getAuthorizationToken(userAuthModel));
     }
 
 

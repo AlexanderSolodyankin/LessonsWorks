@@ -2,6 +2,7 @@ package kg.itacademy.securitylesson.service.impl;
 
 import kg.itacademy.securitylesson.entity.User;
 import kg.itacademy.securitylesson.entity.UserRole;
+import kg.itacademy.securitylesson.model.UserAuthModel;
 import kg.itacademy.securitylesson.repository.UserRepository;
 import kg.itacademy.securitylesson.repository.UserRoleRepository;
 import kg.itacademy.securitylesson.service.UserService;
@@ -10,6 +11,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Base64;
 import java.util.List;
 
 @Service
@@ -51,5 +53,18 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getByUsername(String username) {
         return userRepository.findByUsername(username).orElse(null);
+    }
+
+    @Override
+    public String getAuthorizationToken(UserAuthModel userAuthModel) {
+        User user = userRepository.findByUsername(userAuthModel.getUsername()).orElseThrow( () -> new IllegalArgumentException("Неверный логин или пароль"));
+
+        boolean isPasswordMatches = passwordEncoder.matches(userAuthModel.getPassword(), user.getPassword());
+        if (!isPasswordMatches)
+            throw new IllegalArgumentException("Неверный логин или пароль");
+
+        String usernamePasswordPair = userAuthModel.getUsername() + ":" + userAuthModel.getPassword();
+        return "Basic " + new String(Base64.getEncoder().encode(usernamePasswordPair.getBytes()));
+
     }
 }

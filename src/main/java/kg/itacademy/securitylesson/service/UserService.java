@@ -1,6 +1,7 @@
 package kg.itacademy.securitylesson.service;
 
 import kg.itacademy.securitylesson.entity.User;
+import kg.itacademy.securitylesson.model.UserAuthModel;
 
 import java.util.List;
 
@@ -12,4 +13,6 @@ public interface UserService {
     User getCurrentUser();
 
     User getByUsername(String username);
+
+    String getAuthorizationToken(UserAuthModel userAuthModel);
 }
