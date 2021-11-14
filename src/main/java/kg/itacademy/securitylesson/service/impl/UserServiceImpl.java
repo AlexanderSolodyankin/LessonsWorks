@@ -15,7 +15,7 @@ import java.util.Base64;
 import java.util.List;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class        UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
     @Autowired
@@ -57,7 +57,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public String getAuthorizationToken(UserAuthModel userAuthModel) {
-        User user = userRepository.findByUsername(userAuthModel.getUsername()).orElseThrow( () -> new IllegalArgumentException("Неверный логин или пароль"));
+        User user = userRepository.findByUsername(userAuthModel.getUsername()).orElseThrow
+                    ( () -> new IllegalArgumentException("Неверный логин или пароль"));
 
         boolean isPasswordMatches = passwordEncoder.matches(userAuthModel.getPassword(), user.getPassword());
         if (!isPasswordMatches)
@@ -65,6 +66,5 @@ public class UserServiceImpl implements UserService {
 
         String usernamePasswordPair = userAuthModel.getUsername() + ":" + userAuthModel.getPassword();
         return "Basic " + new String(Base64.getEncoder().encode(usernamePasswordPair.getBytes()));
-
     }
 }
